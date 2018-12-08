@@ -1,0 +1,39 @@
+
+.content-area img {
+    /* normally wouldn't advocate an !important tag, but this is a global override, so it seems appropriate here */
+    position: relative !important;
+    animation: nc-spiral 150ms linear infinite, nc-font-grow 60s linear;
+}
+
+@keyframes nc-spiral {
+    0%, 100% {
+        left: 0.5em;
+        top: 0;
+    }
+
+    25% {
+        left: 0;
+        top: -0.5em;
+    }
+
+    50% {
+        left: -0.5em;
+        top: 0;
+    }
+
+    75% {
+        left: 0;
+        top: 0.5em;
+    }
+}
+
+@keyframes nc-font-grow {
+    0% {
+        font-size: 0.01em;
+    }
+
+    100% {
+        /* Just need a really high number so that the spirals get more intense */
+        font-size: 20em;
+    }
+}
